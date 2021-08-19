@@ -12,6 +12,6 @@ public class Main {
                 break;
 
         }
-        System.out.println("fk u");
+        System.out.println("fk");
     }
 }

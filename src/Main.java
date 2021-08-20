@@ -2,8 +2,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the class number:");
+        start();
+        System.out.println("**********Exit**********");
+    }
+
+    public static void start() {
+        Scanner scanner = new Scanner(System.in);
         String option = scanner.nextLine();
         switch (option) {
             case "1":
@@ -40,8 +45,8 @@ public class Main {
                 break;
             default:
                 System.out.println("Invalid option, please enter a number between 1-15!");
+                start();
         }
         scanner.close();
-        System.out.println("**********Exit**********");
     }
 }

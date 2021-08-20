@@ -14,6 +14,7 @@ public class Main {
             case "1":
                 Class1 c1 = new Class1();
                 c1.display();
+                c1.select();
                 break;
             case "2":
                 break;

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Class1 {
@@ -34,7 +35,25 @@ public class Class1 {
         scanner.close();
     }
 
-    public void countNarcissisticNumber() {
+    private static void countNarcissisticNumber() {
+        ArrayList<Integer> narcissisticNumbers = new ArrayList<>();
+        for (int i = 100; i <= 999; i++) {
+            if (isNarcissisticNumber(i))
+                narcissisticNumbers.add(i);
+        }
+        System.out.println(narcissisticNumbers);
+    }
 
+    private static boolean isNarcissisticNumber(int narcissisticNumber) {
+        int m;
+        int n = narcissisticNumber;
+        int sum;
+        m = n / 100;
+        n -= m * 100;
+        sum = m * m * m;
+        m = n / 10;
+        n -= m * 10;
+        sum += m * m * m + n * n * n;
+        return (sum == narcissisticNumber);
     }
 }

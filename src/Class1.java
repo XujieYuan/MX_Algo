@@ -21,6 +21,8 @@ public class Class1 {
                 countNarcissisticNumber();
                 break;
             case "2":
+                int[] testArray = { 2, 2, 3, 3, 3, 3, 9, 9, 8 };
+                returnMajorityElement(testArray);
                 break;
             case "3":
                 break;
@@ -55,5 +57,16 @@ public class Class1 {
         n -= m * 10;
         sum += m * m * m + n * n * n;
         return (sum == narcissisticNumber);
+    }
+
+    private static void returnMajorityElement(int[] testArray) {
+        int n = testArray.length / 2;
+        int times = 1;
+        for (int i = 0; i < testArray.length - 1; i++) {
+            for (int j = i + 1; j < testArray.length; j++) {
+                if (testArray[j] == testArray[i])
+                    //times++;
+            }
+        }
     }
 }

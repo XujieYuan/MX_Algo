@@ -1,4 +1,8 @@
 import java.util.ArrayList;
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Class1 {
@@ -29,8 +33,8 @@ public class Class1 {
                 System.out.println(returnMajorityElement(testArray));
                 break;
             case "3":
-                String testString = "{{[()]}}";
-                validParentheses(testString);
+                String testString = "{{[(}]}}";
+                System.out.println(isValidParentheses(testString));
                 break;
             case "4":
                 break;
@@ -80,8 +84,30 @@ public class Class1 {
         return -1;
     }
 
-    private static boolean validParentheses(String testString) {
-        boolean validP = false;
-        return validP;
+    private static boolean isValidParentheses(String testString) {
+        int n = testString.length();
+        if (n % 2 == 1) {
+            return false;
+        }
+        Map<Character, Character> pairs = new HashMap<Character, Character>() {
+            {
+                put(')', '(');
+                put(']', '[');
+                put('}', '{');
+            }
+        };
+        Deque<Character> stack = new LinkedList<Character>();
+        for (int i = 0; i < n; i++) {
+            char ch = testString.charAt(i);
+            if (pairs.containsKey(ch)) {
+                if (stack.isEmpty() || stack.peek() != pairs.get(ch)) {
+                    return false;
+                }
+                stack.pop();
+            } else {
+                stack.push(ch);
+            }
+        }
+        return stack.isEmpty();
     }
 }

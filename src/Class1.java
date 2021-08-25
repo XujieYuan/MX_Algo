@@ -17,7 +17,9 @@ public class Class1 {
         System.out.println("An input string is valid if:");
         System.out.println("(1)Open brackets must be closed by the same type of brackets.");
         System.out.println("(2)Open brackets must be closed in the correct order.");
-        System.out.println("4.");
+        System.out.println(
+                "4.Leetcode179. Given a list of non-negative integers nums, arrange them such that they form the largest number.");
+        System.out.println("Note: The result may be very large, so you need to return a string instead of an integer.");
         System.out.println("5.");
     }
 

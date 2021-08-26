@@ -20,7 +20,10 @@ public class Class1 {
         System.out.println(
                 "4.Leetcode179. Given a list of non-negative integers nums, arrange them such that they form the largest number.");
         System.out.println("Note: The result may be very large, so you need to return a string instead of an integer.");
-        System.out.println("5.");
+        System.out.println(
+                "5.Leetcode124. A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence at most once. Note that the path does not need to pass through the root.");
+        System.out.println("The path sum of a path is the sum of the node's values in the path.");
+        System.out.println("Given the root of a binary tree, return the maximum path sum of any path.");
     }
 
     public void select() {
